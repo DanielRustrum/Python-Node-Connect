@@ -4,12 +4,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def trigger():
-    name = request.args.get("name", "World")
-    return f'Hello, {escape(name)}!'
+    args = request.args.get("args", {})
+    call = request.args.get("call", "")
+    return f'Hello, Worlds!'
 
-@app.route('/async', methods=['GET'])
-def async_trigger():
-    name = request.args.get("name", "World")
-    return f'Hello, {escape(name)}!'
-
-app.run()
+app.run(port=3001)
