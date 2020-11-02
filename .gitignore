@@ -1,0 +1,5 @@
+/build/
+/dist/
+/python_node_connect.egg-info/
+/node_modules/
+package-lock.json
